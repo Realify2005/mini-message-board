@@ -1,0 +1,14 @@
+extends layout 
+
+block content 
+
+    form(style="display: flex; flex-direction: column; justify-content: center; align-items: center", method="POST", action="/new")
+        h2 New Message
+        div
+            label(for="user") Name:
+            input#user(name="user", type="text")
+        div 
+            label(for="text") Your Message: 
+            textarea#text(name="text", cols="30", rows="10")
+        div 
+            input(type="submit", value="submit")

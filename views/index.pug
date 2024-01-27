@@ -1,0 +1,13 @@
+extends layout
+
+block content
+  h1 #{title}
+
+  div
+    hr
+    each message in messages
+      p #{message.user}: #{message.text}
+      p(style="font-size: 10px;") Date: #{message.added}
+      hr
+
+    a(href="/new") Add a new message
